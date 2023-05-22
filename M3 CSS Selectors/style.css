@@ -1,0 +1,19 @@
+ul li {
+    font-weight: bold;
+}
+
+ul > li {
+    color: red;
+}
+
+ul li.special {
+    color:blue
+}
+
+li ~ ol {
+    padding-top: .5em;
+}
+
+li + ol {
+    padding-top: 1em;
+}

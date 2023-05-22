@@ -1,3 +1,3 @@
-HTML and CSS repo for Nexul Academy.
+# HTML and CSS repo for Nexul Academy.
 
 Mastering HTML and CSS: M1

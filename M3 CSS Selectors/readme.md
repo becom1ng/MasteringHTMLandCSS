@@ -1,3 +1,3 @@
 # HTML and CSS repo for Nexul Academy.
 
-Mastering HTML and CSS: M2
+Mastering HTML and CSS: M3
