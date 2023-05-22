@@ -4,9 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>M2: Basic Forms</title>
 </head>
 <body>
+    <div>
+        <h1>Basic Forms</h1>
+        Date: <input type="date"> <br>
+        Time: <input type="time"> <br>
+        Week: <input type="week"> <br>
+        Month: <input type="month"> <br>
+
+        <br>
+
+        Age: <input type="number" min="0" max="100" name="age"><br>
+        Tel: <input type="tel"><br>
+        Email: <input type="email" placeholder="info@nexulacademy.com"><br>
+        Url: <input type="url"><br>
+
+        <br>
+
+        Password: <input type="password"><br>
+
+        <br>
+
+        <textarea name="textarea" rows="4" cols="40">
+        Text area for writing things.
+        </textarea><br>
+
+        <br>
+
+        What is your favorite topic so far?<br>
+        <input type="radio" id="favoriteHtml" name="favorite" value="html"> HTML<br>
+        <input type="radio" id="favoriteCss" name="favorite" value="css"> CSS<br>
+        <input type="radio" id="favoriteJavaScript" name="favorite" value="javascript"> JavaScript<br>
+        <input type="radio" id="favoriteCsharp" name="favorite" value="csharp"> C#<br>
+        
+        <br>
+
+        What is your second favorite topic so far?<br>
+        <select name="favorite2">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="aspnet">JavaScript</option>
+            <option value="csharp">C#</option>
+        </select><br>
+
+        <br>
+
+        <label>Click me <input type="text"></label><br>
+        
+        <label for="username">Click me2</label>
+        <span>: </span>
+        <input type="text" id="username"><br><br>
+
+        <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+        <label for="subscribeNews">Subscribe to newsletter.</label>
+
+    </div>
     
 </body>
 </html>
