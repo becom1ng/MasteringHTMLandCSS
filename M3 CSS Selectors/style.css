@@ -1,19 +1,38 @@
-ul li {
-    font-weight: bold;
+td {
+    width: 27px;
 }
 
-ul > li {
-    color: red;
+tr:nth-last-child(n + 7)
+td:nth-last-child(n + 9) {
+    background-color: darkblue;
+    color: darkblue;
+    font-size: 0;
 }
 
-ul li.special {
-    color:blue
+tr:nth-last-child(2n + 7)
+td:nth-last-child(n + 9):after {
+    content: '★';
+    font-size: 15px;
+    color: white;
+    position: relative;
+    left: 15px;
 }
 
-li ~ ol {
-    padding-top: .5em;
+tr:nth-last-child(2n + 8)
+td:nth-last-child(n + 9):before {
+    content: '★';
+    font-size: 15px;
+    color: white;
 }
 
-li + ol {
-    padding-top: 1em;
+tr:nth-child(even)
+td {
+    background-color: white;
+    color: white;
+}
+
+tr:nth-child(odd)
+td {
+    background-color: darkred;
+    color: darkred;
 }
