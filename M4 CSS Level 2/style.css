@@ -6,3 +6,34 @@ h3.outline::before {
 counter-increment: section; /* Increment the value of section counter by 1 */
 content: counter(section) '. '; /* Display the value of section counter */
 }
+
+.breadcrumbs a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+  }
+  .breadcrumbs a:after {
+      content: " /";
+  }
+  .breadcrumbs a:first-child:before {
+      content: "\00BB ";
+  }
+  .breadcrumbs a:last-child:after {
+      content: "";
+  }
+
+  .breadcrumbs {
+    margin-bottom: 1em;
+  }
+
+  @media print {
+    a[href]:after {
+      content: " (" attr(href) ") ";
+    }
+  }
+
+a:hover:after {
+    /* float: right; */
+    position: relative;
+    content: " (" attr(href) ") ";
+}
