@@ -1,0 +1,8 @@
+body, .outline-container {
+counter-reset: section; /* Set a counter named 'section', and it`s initial value is 0. */
+}
+
+h3.outline::before {
+counter-increment: section; /* Increment the value of section counter by 1 */
+content: counter(section) '. '; /* Display the value of section counter */
+}
