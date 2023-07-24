@@ -65,6 +65,9 @@ h2:after {
   a[href]:after {
     content: " (" attr(href) ") ";
   }
+  .full-width {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 768px){
