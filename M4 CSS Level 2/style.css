@@ -2,6 +2,18 @@ html, body {
   overflow-x: hidden;
 }
 
+h2:before, h2:after {
+  color:darkorange;
+}
+h2:before {
+  content: "\219D   ";
+  margin-right: 10px;
+}
+h2:after {
+  content: "   \219C";
+  margin-left: 10px;
+}
+
 .full-width {
   position: relative; /* child absolute */
   padding: .25rem 10px;
@@ -40,13 +52,17 @@ html, body {
   margin-bottom: 1em;
 }
 
+.secret:after {
+  content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, explicabo optio fugiat assumenda similique ipsa. Unde consequuntur rerum voluptates debitis corrupti dolor dignissimos soluta qui? Est earum voluptas impedit autem."
+}
+
 @media print {
   a[href]:after {
     content: " (" attr(href) ") ";
   }
 }
 
-a:hover:after {
+.outline-container a:hover:after {
     position: relative;
     content: " (" attr(href) ") ";
 }
