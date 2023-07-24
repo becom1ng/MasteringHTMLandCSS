@@ -56,13 +56,26 @@ h2:after {
   content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, explicabo optio fugiat assumenda similique ipsa. Unde consequuntur rerum voluptates debitis corrupti dolor dignissimos soluta qui? Est earum voluptas impedit autem."
 }
 
+.outline-container a:hover:after {
+  position: relative;
+  content: " (" attr(href) ") ";
+}
+
 @media print {
   a[href]:after {
     content: " (" attr(href) ") ";
   }
 }
 
-.outline-container a:hover:after {
-    position: relative;
-    content: " (" attr(href) ") ";
+@media screen and (max-width: 768px){
+  .full-width:before, .full-width:after {
+    background: #333;
+    background: rgba(0,0,0,.8);
+  }
+}
+
+@media screen and (max-width: 480px){
+  .full-width:before, .full-width:after {
+    width: 0px;
+  }
 }
