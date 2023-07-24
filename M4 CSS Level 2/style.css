@@ -1,86 +1,52 @@
-body, .outline-container {
-counter-reset: section; /* Set a counter named 'section', and it`s initial value is 0. */
+html, body {
+  overflow-x: hidden;
 }
 
-h3.outline::before {
-counter-increment: section; /* Increment the value of section counter by 1 */
-content: counter(section) '. '; /* Display the value of section counter */
+.full-width {
+  position: relative; /* child absolute */
+  padding: .25rem 10px;
+  background: #333;
+  background: rgba(0,0,0,.8);
+  color: white;
+  font-size: 1.125rem;
+}
+.full-width:before, .full-width:after{
+  content: "";
+  position: absolute;
+  /* fill vertically */
+  top: 0;
+  bottom: 0;
+  width: 9600px;
+  right: 100%;
+  background: darkcyan;
+}
+.full-width:after {
+  left: 100%;
+  background: darkorchid;
 }
 
 .breadcrumbs a {
     text-decoration: none;
     font-weight: bold;
     color: #000;
-  }
-  .breadcrumbs a:after {
-      content: " /";
-  }
-  .breadcrumbs a:first-child:before {
-      content: "\00BB ";
-  }
-  .breadcrumbs a:last-child:after {
-      content: "";
-  }
+}
+.breadcrumbs a:before {
+    content: "\2551  ";
+}
+.breadcrumbs a:first-child:before {
+    content: "";
+}
+.breadcrumbs {
+  margin-bottom: 1em;
+}
 
-  .breadcrumbs {
-    margin-bottom: 1em;
+@media print {
+  a[href]:after {
+    content: " (" attr(href) ") ";
   }
-
-  @media print {
-    a[href]:after {
-      content: " (" attr(href) ") ";
-    }
-  }
+}
 
 a:hover:after {
     position: relative;
     content: " (" attr(href) ") ";
-}
-
-#curved-corner-bottomleft,
-#curved-corner-bottomright,
-#curved-corner-topleft,
-#curved-corner-topright {
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-}
-#curved-corner-topright,
-#curved-corner-bottomright {
-  float: right;
-  /* top: -100px; */
-}
-
-#curved-corner-bottomleft:before,
-#curved-corner-bottomright:before,
-#curved-corner-topleft:before,
-#curved-corner-topright:before {
-  content: "";
-  display: block;
-  width: 200%;
-  height: 200%;
-  position: absolute;
-  border-radius: 50%;
-}
-#curved-corner-topleft:before {
-  top: 0;
-  left: 0;
-  box-shadow: -50px -50px 0 0 red;
-}
-#curved-corner-topright:before {
-  top: 0;
-  right: 0;
-  box-shadow: 50px -50px 0 0 red;
-}
-#curved-corner-bottomleft:before {
-  bottom: 0;
-  left: 0;
-  box-shadow: -50px 50px 0 0 red;
-}
-#curved-corner-bottomright:before {
-  bottom: 0;
-  right: 0;
-  box-shadow: 50px 50px 0 0 red;
 }
