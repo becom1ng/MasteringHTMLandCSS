@@ -2,23 +2,24 @@ body {
   background-color: rgba(0, 139, 139, .5);
 }
 
-header h2:before, header h2:after {
-  color:darkorange;
-  text-shadow: 2px 2px 4px gray;
-}
-header h2:before {
-  content: "\219D   ";
-  margin-right: 10px;
-}
-header h2:after {
-  content: "   \219C";
-  margin-left: 10px;
+header span {
+  margin: 10px;
 }
 
-@media print {
-  a[href]:after {
-    content: " (" attr(href) ") ";
-  }
+#triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 20px solid darkorange;
+  border-bottom: 10px solid transparent;
+}
+
+#triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid darkorange;
+  border-bottom: 10px solid transparent;
 }
 
 img {
@@ -26,10 +27,15 @@ img {
   border-radius: 1em;
 }
 
+img.elliptical {
+  border-radius: 40% / 0% 40%;
+  border: 4px outset rgba(0, 139, 139, .4);
+}
+
 .overlay {
   position: absolute;
   top: 18%;
-  left: 50%;
+  left: 42%;
   transform: translate(-50%, -50%);
   inline-size: 120%;
 }
@@ -52,14 +58,20 @@ img {
 
 @media screen and (max-width: 768px){
   .overlay {
-    top: 14%;
+    top: 16%;
     font-size: 34px;
   }
 }
 
 @media screen and (max-width: 480px){
   .overlay {
-    top: 12%;
+    top: 14%;
     font-size: 30px;
+  }
+}
+
+@media print {
+  a[href]:after {
+    content: " (" attr(href) ") ";
   }
 }
