@@ -3,35 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      body {
-        background-color: rgb(255, 102, 0);
-      }
-    </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
     </style>
     <title>M5: CSS Level 3</title>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-light py-0">
+  <nav class="navbar navbar-expand-lg bg-secondary-subtle text-dark px-2 fixed-top">
     <div class="container px-0">
         <a href="#" class="navbar-brand"><img src="img/Logo.Hero.Adventures.webp" alt="Hero Adventures" height="50px"></a>
 
         <button class="button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-            <span class="navbar-toggler-icon">
-
-            </span>
+            <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="#create" class="nav-link">Plan</a>
+                    <a href="#plan" class="nav-link">Plan</a>
                 </li>
                 <li class="nav-item">
                   <a href="#experience" class="nav-link">Experience</a>
@@ -46,17 +39,28 @@
         </div>
     </div>
   </nav>
-  
+ 
   <div class="container-fluid text-center hero">
-    <p>Test CONTENT</p>
-    
-    <!-- <img src="img/treeblock50.jpg" alt="" class="img-fluid elliptical">
-    <div class="amazing overlay">
-      Obstacles hampering<br>
-      your adventure?
-    </div> -->
+    <div class="overlay">
+      <p class="amazing">Discover Your <span class="amazing2">Wonder</span></p>
+      <p>Providing resources, guidance, encouragement<br>and guided tours to all adventure-seekers.</p>
+      <p>Let us help you plan your next experience!</p><br>
+      <button type="button" class="btn btn-success btn-lg">Schedule a Free Consultation</button>   
+    </div>
   </div>
-  <footer>
+
+  <div class="container-fluid text-center contentblock py-5 bg-light-subtle">
+    <h3>Placeholder to generate scrollbar.</h3>
+  </div>
+  
+  <footer class="p-2 bg-secondary-subtle text-dark text-center position-relative">
+    <div class="container-fluid">
+      <p class="lead pt-3">Copyright &copy; 2023 Ryan Lavery</p>
+      <a href="#" class="position-absolute bottom-0 end-0 pe-3 pe-sm-5 pb-4 pb-sm-3">
+        <i class="bi bi-arrow-up-circle h1" style="color: rgba(106, 73, 36, 1)"></i>
+      </a>
+    </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
