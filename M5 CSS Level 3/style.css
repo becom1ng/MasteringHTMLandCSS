@@ -2,32 +2,9 @@ body {
   background-color: rgba(0, 139, 139, .5);
 }
 
-header span {
-  margin: 10px;
-}
-
-#triangle-left {
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-right: 20px solid darkorange;
-  border-bottom: 10px solid transparent;
-}
-
-#triangle-right {
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-left: 20px solid darkorange;
-  border-bottom: 10px solid transparent;
-}
-
-img {
+img.elliptical {
   border: 6px solid rgba(0, 139, 139, .2);
   border-radius: 1em;
-}
-
-img.elliptical {
   border-radius: 40% / 0% 40%;
   border: 4px outset rgba(0, 139, 139, .4);
 }
@@ -74,4 +51,11 @@ img.elliptical {
   a[href]:after {
     content: " (" attr(href) ") ";
   }
+}
+
+.hero {
+  background-image: url(img/treeblockhero.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
 }
