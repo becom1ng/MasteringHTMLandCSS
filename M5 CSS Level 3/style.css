@@ -2,134 +2,37 @@ html body {
   font-family: 'Roboto', sans-serif;
 }
 
-.overlay {
-  font-size: 18px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  inline-size: 100%;
-  text-shadow:
-  1px 1px 1px black;
-}
-
-.amazing {
-  line-height: 100%;
-  font-size: 48px;
-  color: whitesmoke;
-  font-weight: bold;
-  text-shadow:
-  1px 1px 2px black,
-  1px 2px 2px rgb(0, 82, 82, 0.2),
-  2px 4px 4px rgb(0, 82, 82, 0.2),
-  4px 8px 8px rgb(0, 82, 82, 0.2),
-  8px 16px 16px rgb(0, 82, 82, 0.2),
-  16px 32px 32px rgb(0, 82, 82, 0.2);
-}
-
-.amazing2 {
-  font-weight: bolder;
-  font-size: 54px;
-  text-shadow:
-  0 0 4px rgb(157, 194, 72, .6),
-  0 0 16px rgb(157, 194, 72, .6),
-  2px 2px 2px black,
-  1px 2px 2px rgb(0, 82, 82, 0.2),
-  2px 4px 4px rgb(0, 82, 82, 0.2),
-  4px 8px 8px rgb(0, 82, 82, 0.2),
-  8px 16px 16px rgb(0, 82, 82, 0.2),
-  16px 32px 32px rgb(0, 82, 82, 0.2);
-}
-
-.hero {
-  position: relative; 
-  height: 600px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero::before {
-  content: "";
-  z-index: -1;
-  background-image: url(img/BigSpring2160.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: local;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: .6;
-  border-width: 0 10px 10px 0;
-  border-style: solid;
-  border-color: rgb(160, 197, 76, .4);
-  border-radius: 100% 0% 100% 0% / 0% 85% 15% 100%;
-}
-
-.hero2 {
-  position: relative; 
-  height: 600px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.sunrise {
+  height: 400px;
+  background: rgb(247, 157, 0);
   background:
-    repeating-linear-gradient(125deg,
-    rgb(0, 0, 0, 0.4) 0,
-    rgb(0, 0, 0, 0.4) 2px,
-    rgb(86, 86, 86, 0.4) 2px,
-    rgb(86, 86, 86, 0.4) 4px),
-    url(img/BigSpring2160.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: local;
-  border-width: 0 10px 10px 0;
-  border-style: solid;
-  border-color: rgb(160, 197, 76, .4);
-  border-radius: 100% 0% 100% 0% / 0% 85% 15% 100%;  
+    radial-gradient(circle at bottom, rgb(255, 255, 0, 1) 10px, rgb(247, 157, 0, .5) 20px, transparent),
+    radial-gradient(ellipse 1600px 300px at bottom, rgb(255, 255, 0, 1) 10px, rgb(247, 157, 0, .6) 40px, pink 40%, skyblue 80%, rgb(0, 183, 255));
 }
 
-.contentblock {
-  height: 800px;
+.diagoverlay {
+  height: 400px;
+  background:
+  repeating-linear-gradient(125deg,
+  rgb(0, 0, 0, 0.4) 0,
+  rgb(0, 0, 0, 0.4) 2px,
+  rgb(86, 86, 86, 0.4) 2px,
+  rgb(86, 86, 86, 0.4) 4px);
+  background-color: cadetblue;
 }
 
-@media screen and (max-width: 768px){
-  .hero::before {
-    background-image: url(img/BigSpring1080.webp);
-  }
-  .hero2 {
-    background:
-      repeating-linear-gradient(125deg,
-      rgb(0, 0, 0, 0.4) 0,
-      rgb(0, 0, 0, 0.4) 2px,
-      rgb(86, 86, 86, 0.4) 2px,
-      rgb(86, 86, 86, 0.4) 4px),
-      url(img/BigSpring1080.webp);
-    background-size: cover;
-  }
+.dotsbg {
+  background: radial-gradient(chartreuse 30%, transparent 40%);
+  background-size: 10px 10px;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
 }
 
-@media screen and (max-width: 480px){
-  .hero::before {
-    background-image: url(img/BigSpring540.webp);
-  }
-  .hero2 {
-    background:
-      repeating-linear-gradient(125deg,
-      rgb(0, 0, 0, 0.4) 0,
-      rgb(0, 0, 0, 0.4) 2px,
-      rgb(86, 86, 86, 0.4) 2px,
-      rgb(86, 86, 86, 0.4) 4px),
-      url(img/BigSpring540.webp);
-    background-size: cover;
-  }
-}
-
-@media print {
-  a[href]:after {
-    content: " (" attr(href) ") ";
-  }
+.buttontext {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px rgb(0, 0, 0, 0.4);
+  padding: 30px;
+  text-align: center;
 }
