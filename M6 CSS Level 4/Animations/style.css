@@ -1,0 +1,122 @@
+body {
+    background-color: whitesmoke;
+}
+
+header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.contentbox {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    font-size: 100px;
+    padding: 20px 0 20px 0;
+}
+
+.expander img {
+    transform: scale(.2, .2);
+    animation: expander 4s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes expander {
+    0% {
+        transform: scale(0);
+    }
+    10% {
+        transform: scale(0.1, 0.1);
+    }
+    20% {
+        transform: scale(.2, .2) rotate(90deg)
+    }
+    30% {
+        transform: scale(.4, .4) rotate(180deg);
+    }
+    40% {
+        transform: scale(.6, .6) rotate(270deg);
+    }
+    50% {
+        transform: scale(.8, .8) rotate(360deg);
+    }
+    60% {
+        transform: scale(1, 1) rotate(360deg);
+    }
+    100% {
+        transform: scale(1, 1) rotate(360deg);
+    }
+}
+
+.grow img {
+    transition: 1s ease;
+}
+    
+.grow img:hover{
+    transform: scale(1.1);
+    transition: 1s ease;
+}    
+
+.shine {
+	position: relative;
+    overflow: hidden;
+}
+
+.shine::before {
+    content: "";
+	position: absolute;
+	top: 0;
+	left: -75%;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	transform: skewX(-30deg);
+}
+
+.shine:hover::before {
+	animation: shine 1s;
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+.bounce {
+	animation: bounce 3s infinite both;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-64px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-36px);
+        animation-timing-function: ease-in;
+    }
+    65% {
+        transform: translateY(-16px);
+        animation-timing-function: ease-in;
+    }
+    80% {
+        transform: translateY(-8px);
+        animation-timing-function: ease-in;
+    }
+    92% {
+        transform: translateY(-4px);
+        animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    88%,
+    100% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+    }
+}
